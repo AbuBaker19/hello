@@ -1,81 +1,76 @@
 const mongoose = require('mongoose');
 
-//Songs schema
-const songInfoSchema = mongoose.Schema({
-    Title:
+//SongWriter schema
+const songWriterSchema = mongoose.Schema({
+    FullName:
     {
         type: String,
     },
-    SongWriters:[{
-        SongWriters :{ type: mongoose.Schema.Types.ObjectId, ref: 'songWriters'},
-        SongSplits : {type: String, default:"50 %"} 
-    }],
-    Genre:
+    Alias:
     {
         type: String
     },
-    Tempo:{
+    Email:{
+        type : String,
+        default : "abc@gmail.com"  
+    },
+    Location:{
         type : String,
         default : ""  
     },
-    Key:{
+    WebsiteLink:{
         type : String,
         default : ""  
     },
-    Songstate:{
+    spotifySongWriterProfile:{
         type : String,
         default : ""  
     },
-    
-    SongPitchDescription:{
+    Description:{
         type : String,
         default : ""  
     },
-    SongLyricsFile:{
+    ResgisteredPro:{
         type : String,
         default : ""  
     },
-    SongMP3File:{
+    ProNumber:{
         type : String,
         default : ""  
     },
-    AuctionStatus:{
+    SolanaWalletAddress:{
         type : String,
         default : ""  
     },
-    NFT_Id:{
-        type : String,
-        default : ""  
-    },
-    AuctionEnd:{
+    ProfileImage:{
         type : Date(),
         default : ""  
     },
-    AuctionStart:{
+    HiResImage:{
         type : Date(),
         default : ""  
     },
-    MetaplexAuctionLink:{
+    PublishingStatus:{
         type : String,
         default : ""  
     },
-    ReservePrice:{
+    Publisher:{
         type : String,
         default : ""  
     },
-    CurrentBid:{
+    MangagementStatus:{
         type : String,
         default : ""  
     },
-    WinningBidAmount:{
+    MangagementContectName:{
         type : String,
         default : ""  
     },
-    WinningBidderWalletAddress:{
+    MangagementContectEmail:{
         type : String,
         default : ""  
     },
-    WinningBidderEmail:{
+    MangagementContectphoneNumber:{
         type : String,
         default : ""  
     },
@@ -87,15 +82,11 @@ const songInfoSchema = mongoose.Schema({
         type : String,
         default : ""  
     },
-    NoOfPlays:{
+    DisplayProfile:{
         type : String,
         default : ""  
-    },
-    NoOfFavourits:{
-        type : String,
-        default : ""  
-    },
+    }
 
 });
-//Songs Model
-module.exports = mongoose.model('songs', songInfoSchema);
+//SongWriter Model
+module.exports = mongoose.model('songWriters', songWriterSchema);
