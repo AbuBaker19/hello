@@ -1,5 +1,5 @@
-const { find } = require('./userMdl');
-const abc = require('./userMdl');
+const { find } = require('../Models/userMdl');
+const abc = require('../Models/userMdl');
 
 
 // creat Abc
