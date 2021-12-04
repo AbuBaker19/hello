@@ -10,7 +10,7 @@ env.config()
 
 
 
-mongoose.connect("mongodb://localhost/testing", { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb+srv://hello:hellojazz@cluster0.biaoh.mongodb.net/testing?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
     .then(console.log("Connected to MongoDB"))
     .catch((err) => console.log("Error While Connectiong to MongoDB ", err));
 
